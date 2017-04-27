@@ -1,0 +1,8 @@
+#Ubuntu 15.10
+
+Looks like very cool feature
+
+* General availability of Canonical’s OpenStack Autopilot, the fastest and easiest way to build an Ubuntu OpenStack cloud
+* LXD machine containers: a pure container hypervisor hosting Ubuntu, CentOS and other Linux guests
+* Tech Preview:  nova-compute-lxd OpenStack driver for machine containers
+Tech Preview: DPDK fast network packet processing packaged and ready for testing
