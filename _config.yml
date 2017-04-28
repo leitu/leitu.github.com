@@ -12,7 +12,7 @@ title_separator          : "-"
 name                     : "Lei Tu"
 description              : "Lving somewhere I want to"
 url                      : https://leitu.github.io
-baseurl                  : "/blog"
+baseurl                  : 
 repository               : "leitu/leitu.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
