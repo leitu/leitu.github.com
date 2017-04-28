@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "Tokyo, Japan"
-title                    : "Something missing in the DevOPs"
+title                    : "DevOPs; TL;"
 title_separator          : "-"
 name                     : "Lei Tu"
-description              : "Something fun"
+description              : "Few word during the work"
 url                      : https://leitu.github.io
 baseurl                  : 
 repository               : "leitu/leitu.github.com"
@@ -80,9 +80,9 @@ author:
   name             : "Lei Tu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Known as Alex"
-  location         : "jp"
+  location         : "Tokyo, Japan"
   email            : "alex@alt.sh"
-  uri              : "https://leitu.github.io"
+  uri              : "blog.alt.sh"
   bitbucket        :
   codepen          :
   dribbble         :
