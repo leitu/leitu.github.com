@@ -1,10 +1,13 @@
-##Overview##
+# Overview
+
 This is very interesting, cfacter is as native package delivered as Puppet 4.0 AIO package, looks like no one touch it before, at least in Chinese Community, or probably I'm so isolate.
 
-##Cfacter##
+## Cfacter
+
 Cfacter is very impressive to me. I tried this in puppet 4.0, although it's capability in 3.7, and first introduced puppetconf 2014.
 
-#Running speed##
+## Running speed
+
 Let's do some running testing.
 
 [root@localhost modules]# time facter > /dev/null
@@ -20,11 +23,12 @@ sys 0m0.038s
 
 Speed improvment, 5.4 times faster.
 
-#Usage#
+## Usage
+
 Working together with facter.
 Here I define a test class with sshrsakey.
 
-```
+```bash
   class test {
     file { "cfacter" :
         path => "/tmp/test",
@@ -36,14 +40,15 @@ Here I define a test class with sshrsakey.
    }
 ```
 
-```
+```bash
   puppet agent test.pp --cfacter
 ```
-When you enable cfacter, facter is still working. The display values are exactly the same. 
+
+When you enable cfacter, facter is still working. The display values are exactly the same.
 
 But if you want to customized cfacter as facter, it's not working as what your expect.
 
-```
+```bash
  [root@localhost modules]# export CFACTER_test=testcfacter
  [root@localhost modules]# cfacter | grep test2
  [root@localhost modules]# export FACTER_test=testfacter

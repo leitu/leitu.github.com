@@ -1,11 +1,14 @@
-##Install CoreOS on HV
+# Overview
+
+## Install CoreOS on HV
+
 We are using ipxe boot as installation method, which is easy for future usage.
 
 XenServer: 6.2
 CoreOS: v557.02, stable
 
+## Configure your ipxe server
 
-#Configure your ipxe server
 Insprition with @kelseyhightower, his present in Gophercon 2014, use his ipxeserver simple code to running a ipxe server 1, you also can visit his project 2.
 
 You need to specify your own key location before running complier, This light web service host the boot file
@@ -15,7 +18,8 @@ You need to specify your own key location before running complier, This light we
   ./ipxeserver
 ``
 
-#Get all your needs image to local
+## Get all your needs image to local
+
 Here we are using xen as a example
 
 We download all we needs files to local
@@ -28,7 +32,6 @@ We download all we needs files to local
 ``
 
 Assume we are having a web server to host those, or we can use ipxe server to host this.
-
 
 ``bash
  wget http://boot.ipxe.org/ipxe.iso

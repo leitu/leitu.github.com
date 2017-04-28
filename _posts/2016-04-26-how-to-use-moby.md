@@ -15,6 +15,7 @@ $ cd linuxkit
 $ make
 $ export PATH=$PATH:$(pwd)/bin
 ```
+
 The build will generate linuxkit and moby
 
 Add linuxkit.yml
@@ -106,6 +107,7 @@ Create outputs:
 ```
 
 Run the moby image, make sure your docker deamon is running
+
 ```bash
 $ linuxkit run moby
 
@@ -145,4 +147,4 @@ Terminated
 / # [   77.040416] reboot: System halted
 ```
 
-the system needs the xhyve to run 
+the system needs the xhyve to run
