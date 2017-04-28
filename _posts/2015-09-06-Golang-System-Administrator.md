@@ -1,4 +1,4 @@
-#Golang for System Administrator
+# Golang for System Administrator
 
 I have been google for many times, I didn't see much script or working methond with golang for pecific system administrator area.
 

@@ -6,11 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "jp"
-title                    : "Life&Code"
+locale                   : "Tokyo, Japan"
+title                    : "Something missing in the DevOPs"
 title_separator          : "-"
 name                     : "Lei Tu"
-description              : "Lving somewhere I want to"
+description              : "Something fun"
 url                      : https://leitu.github.io
 baseurl                  : 
 repository               : "leitu/leitu.github.com"
@@ -26,7 +26,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 10
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
@@ -87,9 +87,9 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : 
   foursquare       :
-  github           :
+  github           : "https://github.com/leitu"
   google_plus      :
   keybase          :
   instagram        :
