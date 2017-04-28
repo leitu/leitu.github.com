@@ -11,7 +11,7 @@ title                    : "Life&Code"
 title_separator          : "-"
 name                     : "Lei Tu"
 description              : "Lving somewhere I want to"
-url                      : "https://leitu.github.io"
+url                      : https://leitu.github.io
 baseurl                  : "/blog"
 repository               : "leitu/leitu.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -82,7 +82,7 @@ author:
   bio              : "Known as Alex"
   location         : "jp"
   email            : "alex@alt.sh"
-  uri              :
+  uri              : "https://leitu.github.io"
   bitbucket        :
   codepen          :
   dribbble         :
