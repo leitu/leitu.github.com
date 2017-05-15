@@ -1,6 +1,9 @@
 # Azure related
 
 TL;DR. It's all about Azure related.
+Personally I complain Azure every day every time, But Azure improve a lot, not only because of lots of my formal colleagues are working with Azure, but also they really want to do things good, however not good enough as a product.
+They did really great job with their product, and they towards to community.
+But As a prodcut, they are far from AWS yet.
 
 ## Backgroud
 
@@ -131,3 +134,5 @@ function param_replace {
     perl -p -i -e "s/CERT_PASSWORD_GOES_HERE_REPLACE_ME/$CERT_PASSWORD/g" $VM_PARAMS
 }
 ```
+
+### To Be Contunied
