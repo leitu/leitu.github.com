@@ -176,10 +176,26 @@ for folder in ['jobs', 'config-history']:
 ```
 
 Actually there is more easy way, just using curl. which is not published in Azure document.
+It's not listed in any documents.
 
 ```bash
 curl -X PUT -H "x-ms-blob-type: BlockBlob" -H "x-ms-blob-content-type: application/x-www-form-urlencoded" \
   "${STORAGE_URL_CONTAINER}${UPLOAD_NAME}${SAS_TOKEN}" --data-binary "@${PATH}"
 ```
+
+
+### Get the bear code
+
+If you don't like to command way, you can call for the API. when you are doing the post, you have to get the bear code as token. Azure provide a very nice [document](https://github.com/Microsoft/azure-docs/blob/master/articles/azure-resource-manager/resource-manager-rest-api.md)
+In short words, better to use service princple to do this.
+
+```bash
+a=$(curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&resource=https://management.core.windows.net/&client_id=<application id>&client_secret=<password you selected for authentication>" "https://login.microsoftonline.com/<Azure AD Tenant ID>/oauth2/token?api-version=1.0" | jq ".access_token" > /dev/null)
+
+curl -s -H "Authorization: Bearer ${a}" -X POST "https://management.azure.com/subscriptions/<subscription id?/resourceGroups/<resource group>/providers/Microsoft.Web/sites/<resource name>/resetSlotConfig?api-version=2016-08-01"
+```
+
+Then you will get the token
+
 
 ### To Be Contunied
