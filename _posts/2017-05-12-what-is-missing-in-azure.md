@@ -135,4 +135,51 @@ function param_replace {
 }
 ```
 
+### Azure Storage
+
+All the logs shows that you can use sdk to upload the content/data to storage. Here is the template how we backup data, it's python, but mixed with ruby :(
+
+```python
+"""Backup jenkins job and history """
+from datetime import date, timedelta
+import os
+import tarfile
+from azure.storage.blob import BlockBlobService
+
+AZURE_STORAGE_ACCOUNT = "<%= @storageaccount %>"
+AZURE_STORAGE_ACCESS_KEY = \
+   "<%= @storagekey %>"
+CONTAINER = "<%= @container %>"
+WORKDIR = '/var/lib/jenkins'
+
+time = date.today()
+CURRENT = time.strftime("%Y%m%d")
+
+SERVICE = BlockBlobService(account_name=AZURE_STORAGE_ACCOUNT, account_key=AZURE_STORAGE_ACCESS_KEY)
+
+os.chdir(WORKDIR)
+
+def compress(folder_name):
+    """get compress and upload"""
+    tar_name = folder_name + '_' + CURRENT + '.tar.gz'
+    blob_name = "jenkins/" + tar_name
+    tar = tarfile.open(tar_name, "w")
+    tar.add(folder_name)
+    tar.close()
+    SERVICE.create_blob_from_path(CONTAINER, blob_name, tar_name)
+    os.remove(tar_name)
+
+
+for folder in ['jobs', 'config-history']:
+    compress(folder)
+    print('Successfully Upload!')
+```
+
+Actually there is more easy way, just using curl. which is not published in Azure document.
+
+```bash
+curl -X PUT -H "x-ms-blob-type: BlockBlob" -H "x-ms-blob-content-type: application/x-www-form-urlencoded" \
+  "${STORAGE_URL_CONTAINER}${UPLOAD_NAME}${SAS_TOKEN}" --data-binary "@${PATH}"
+```
+
 ### To Be Contunied
