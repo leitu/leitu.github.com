@@ -183,7 +183,6 @@ curl -X PUT -H "x-ms-blob-type: BlockBlob" -H "x-ms-blob-content-type: applicati
   "${STORAGE_URL_CONTAINER}${UPLOAD_NAME}${SAS_TOKEN}" --data-binary "@${PATH}"
 ```
 
-
 ### Get the bear code
 
 If you don't like to command way, you can call for the API. when you are doing the post, you have to get the bear code as token. Azure provide a very nice [document](https://github.com/Microsoft/azure-docs/blob/master/articles/azure-resource-manager/resource-manager-rest-api.md)
@@ -196,6 +195,5 @@ curl -s -H "Authorization: Bearer ${a}" -X POST "https://management.azure.com/su
 ```
 
 Then you will get the token
-
 
 ### To Be Contunied
