@@ -196,4 +196,9 @@ curl -s -H "Authorization: Bearer ${a}" -X POST "https://management.azure.com/su
 
 Then you will get the token
 
+### Subnet
+
+Azure is not able to devide subnet as AWS
+for example, you have a range 10.0.0.0/22. you can create subnet with 10.0.1.0/24 and 10.0.2.0/24, you are not able to use 10.0.1.0/28 then 10.0.1.16/28
+
 ### To Be Contunied
