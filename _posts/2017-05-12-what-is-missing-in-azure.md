@@ -201,4 +201,27 @@ Then you will get the token
 Azure is not able to devide subnet as AWS
 for example, you have a range 10.0.0.0/22. you can create subnet with 10.0.1.0/24 and 10.0.2.0/24, you are not able to use 10.0.1.0/28 then 10.0.1.16/28
 
+### Metadata Fetching
+
+#### Azure
+
+metadata `https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-instancemetadataservice-overview`
+
+instance-id:
+`curl -H Metadata:true "http://169.254.169.254/metadata/instance?api-version=2017-04-02"`
+
+#### EC2
+
+`http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html#instancedata-data-categories`
+
+ami-id:
+`curl http://169.254.169.254/latest/meta-data/ami-id`
+
+### GCP
+
+`https://cloud.google.com/compute/docs/storing-retrieving-metadata`
+
+instance-id:
+`curl "http://metadata.google.internal/computeMetadata/v1/instance/disks/" -H "Metadata-Flavor: Google"`
+
 ### To Be Contunied
