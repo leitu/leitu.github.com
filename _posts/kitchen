@@ -1,0 +1,26 @@
+chef
+chef generate cookbook motd
+chef generate file motd
+
+
+chef-client 
+knife cookbook create apache --cookbook-path .
+cd apache
+kitchen init --create-gemfile
+bundle install
+
+
+kitchen list
+kitchen converge default-centos-73
+kitchen login default-centos-73
+kitchen destroy default-centos-73
+
+
+debug with value in chef recipe
+
+require 'pp'
+
+node.default['ipaddress'] = '1.1.1.1'
+pp node.debug_value('ipaddress')
+
+chef-zero small chef server
